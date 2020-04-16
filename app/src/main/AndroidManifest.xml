@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hassam.begeniusbyhassam">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light"
+        >
+        <activity android:name="com.hassam.begeniusbyhassam.SoftwareEngineeringActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.DatabaseActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.ResultActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.GKnowledgeActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.MathActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.ComputerActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.CategoryActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.RegistrationActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.LoginActivity"
+            />
+        <activity android:name="com.hassam.begeniusbyhassam.MainActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

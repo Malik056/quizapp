@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoryActivity">
+
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="10sp"
+        android:text="Email:"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageButton
+        android:id="@+id/btnLogout"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/exit_icon"
+        android:backgroundTint="@android:color/black"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtLogin"
+        android:text="Select Subject"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="20sp"
+        android:id="@+id/selectType"
+        app:layout_constraintBottom_toTopOf="@id/btnComputer"
+        />
+
+    <Button
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/selectType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20sp"
+        android:text="Computer Science"
+        android:textSize="18sp"
+        android:background="@drawable/roundedbutton"
+        android:textColor="@android:color/white"
+        android:id="@+id/btnComputer"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btnMath"
+        />
+    <Button
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnComputer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10sp"
+        android:text="Mathematics"
+        android:textSize="18sp"
+        android:background="@drawable/roundedbutton"
+        android:textColor="@android:color/white"
+        android:id="@+id/btnMath"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btnGKnowledge"
+        />
+    <Button
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnMath"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10sp"
+        android:text="General Knowledge"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/roundedbutton"
+        android:textColor="@android:color/white"
+        android:id="@+id/btnGKnowledge"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@id/btnDatabase"
+        />
+    <Button
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnGKnowledge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10sp"
+        app:layout_constraintBottom_toTopOf="@id/btnSoftwareEngineering"
+        android:text="Database"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/roundedbutton"
+        android:textColor="@android:color/white"
+        android:id="@+id/btnDatabase"
+        android:padding="5dp"
+        />
+    <Button
+        android:layout_width="270dp"
+        android:id="@+id/btnSoftwareEngineering"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnDatabase"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10sp"
+        android:text="Software Engineering"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/roundedbutton"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        android:layout_marginBottom="40pt"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
