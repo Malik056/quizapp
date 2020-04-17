@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         TextView btnCreateAcc = findViewById(R.id.createone);
+        Button btnLogin = findViewById(R.id.btnLogin);
         btnCreateAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,33 +30,36 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
-    public void login(View view){
-        MyDb myDb = MyDb.getInstance(getApplicationContext());
-        SQLiteDatabase db = myDb.getReadableDatabase();
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDb myDb = MyDb.getInstance(getApplicationContext());
+                SQLiteDatabase db = myDb.getReadableDatabase();
 
-        EditText email = findViewById(R.id.txtUsername), password = findViewById(R.id.txtPass);
+                EditText email = findViewById(R.id.txtUsername), password = findViewById(R.id.txtPass);
 
-        String mEmail = email.getText().toString();
+                String mEmail = email.getText().toString();
 
-        String [] columns = {"email","password"};
-        String [] cValues = {email.getText().toString(),password.getText().toString()};
+                String [] columns = {"email","password"};
+                String [] cValues = {email.getText().toString(),password.getText().toString()};
 
-        Cursor cursor = db.query("User",columns, "email = ? AND password = ?",cValues,null,null,null);
-        if(cursor != null){
-            if(cursor.moveToFirst()){
+                Cursor cursor = db.query("User",columns, "email = ? AND password = ?",cValues,null,null,null);
+                if(cursor != null){
+                    if(cursor.moveToFirst()){
 
 
-                cursor.close();
+                        cursor.close();
 
-                Intent intent = new Intent(getApplicationContext(), CategoryActivity.class);
-                intent.putExtra("email", mEmail);
-                startActivity(intent);
+                        Intent intent = new Intent(getApplicationContext(), CategoryActivity.class);
+                        intent.putExtra("email", mEmail);
+                        startActivity(intent);
+                    }
+                    else {
+                        cursor.close();
+                    }
+                }
             }
-            else {
-                cursor.close();
-            }
-        }
-
+        });
     }
+
 }

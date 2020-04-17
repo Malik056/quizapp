@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,9 +27,11 @@ public class RegistrationActivity extends AppCompatActivity {
 
         mView = findViewById(R.id.grand_parent);
 
-        TextView mBtnCreateOne = findViewById(R.id.alreadytext);
+        TextView mLoginText = findViewById(R.id.alreadytext);
+        Button mBtnCreateOne = findViewById(R.id.btnCreateAccount);
 
-        mBtnCreateOne.setOnClickListener(new View.OnClickListener() {
+
+        mLoginText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegistrationActivity.this,LoginActivity.class);

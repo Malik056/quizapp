@@ -31,6 +31,7 @@
         <activity android:name="com.hassam.begeniusbyhassam.LoginActivity"
             />
         <activity android:name="com.hassam.begeniusbyhassam.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

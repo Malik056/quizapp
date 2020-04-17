@@ -16,7 +16,7 @@ public class MyDb extends SQLiteOpenHelper {
     private static final String DBName = "myDb";
     private static final int VERSION = 2;
     private static MyDb myDb;
-    public static MyDb getInstance(@NonNull Context context){
+    static MyDb getInstance(@NonNull Context context){
         if(myDb == null){
             myDb = new MyDb(context);
         }
